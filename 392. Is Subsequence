@@ -1,0 +1,18 @@
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        int n=s.length();//subsequence
+        int m=t.length();//string
+        int i=0;//to iterate sub
+        int j=0;//to iterate string
+        int c=0;//validate count
+        while(i<n && j<m){
+            if(s.charAt(i)==t.charAt(j)){
+                i++;
+                j++;
+                c+=1;
+            }
+            else j++;
+        }
+        return c==n?true:false;
+    }
+}
